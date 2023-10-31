@@ -10,7 +10,7 @@ This Project is the React version of my previous project (Python-flask) and crea
 
 # Improvement of Previous one
 - more filtering criteria
-- added update function of the data
+- added update function
 
 # Remark
 [Previous Project](https://github.com/Adalaupy/Asset_Calculation)
