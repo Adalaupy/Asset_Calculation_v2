@@ -10,22 +10,20 @@ const Filter = () => {
 
 
 
-    const { MonthYearFilter, setMonthYearFilter, SourceFilter, setSourceFilter, TypeFilter, setTypeFilter, MonthYearOption, SourceOption, TypeOption } = useStateContext()
-
-
-
-
+    const { MonthYearFilter, setMonthYearFilter, SourceFilter, setSourceFilter, TypeFilter, setTypeFilter, MonthYearOption, SourceOption, TypeOption, currentColor } = useStateContext()
 
 
 
     return (
 
-        <div className='m-5'>
+        <div className='filter-main'>
 
 
-            <div className='flex justify-center'>
+            <div className='filter-box' style={{ border: `${currentColor} solid 1px` }}>
 
-                <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <h2 style={{ textAlign: 'center' }}>Filters</h2>
+
+                <FormControl sx={{ m: 1, minWidth: 120 }} >
 
 
                     <FormHelperText>Month Year</FormHelperText>
@@ -40,7 +38,6 @@ const Filter = () => {
                             <MenuItem key={item} value={item}>{item}</MenuItem>
                         ))}
                     </Select>
-
                 </FormControl>
 
 
@@ -82,7 +79,7 @@ const Filter = () => {
 
 
             </div >
-        </div>
+        </div >
     )
 }
 

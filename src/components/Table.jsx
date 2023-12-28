@@ -7,7 +7,7 @@ import DeleteIcon from '@mui/icons-material/DeleteOutlined';
 const Table = () => {
 
 
-    const { FilterRecord, ExchangeRateCalculate, AssetRecord, setAssetRecord } = useStateContext()
+    const { FilterRecord, ExchangeRateCalculate, AssetRecord, setAssetRecord, currentColor } = useStateContext()
 
 
 
@@ -146,20 +146,22 @@ const Table = () => {
     return (
 
 
-        <div className='m-5 rounded-2xl grid justify-center' style={{ height: '600px' }}>
+        <div className="Table-main" style={{ border: `${currentColor} 1px solid` }}>
+
+            <div className='Table-box' style={{ height: '600px' }}>
 
 
-            <DataGrid
-                rows={DisplayRecord}
-                columns={Columns}
-                processRowUpdate={UpdateRow}
+                <DataGrid
+                    rows={DisplayRecord}
+                    columns={Columns}
+                    processRowUpdate={UpdateRow}
+
+                />
+
+            </div >
+        </div>
 
 
-
-
-            />
-
-        </div >
 
     )
 }

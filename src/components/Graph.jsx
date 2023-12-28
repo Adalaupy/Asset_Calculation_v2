@@ -6,7 +6,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const Graph = () => {
 
-    const { FilterRecord } = useStateContext()
+    const { FilterRecord, currentColor } = useStateContext()
 
     const OrganizedData = BarsDataOrganize([...FilterRecord])
 
@@ -18,23 +18,29 @@ const Graph = () => {
 
     return (
 
-        <BarChart
-            width={600}
-            height={800}
-            series={[
-                {
-                    data: AssetData,
-                    label: 'Asset',
-                    id: 'AssetID',
-                },
-                {
-                    data: LiabData,
-                    label: 'Liability',
-                    id: 'LiabID',
-                }
-            ]}
-            xAxis={[{ data: MonthData, scaleType: 'band' }]}
-        />
+        <div className="bar-chart-main" style={{ border: `${currentColor} 1px solid` }}>
+
+            <BarChart
+                width={600}
+                height={800}
+                series={[
+                    {
+                        data: AssetData,
+                        label: 'Asset',
+                        id: 'AssetID',
+                    },
+                    {
+                        data: LiabData,
+                        label: 'Liability',
+                        id: 'LiabID',
+                    }
+                ]}
+                xAxis={[{ data: MonthData, scaleType: 'band' }]}
+            />
+
+        </div>
+
+
 
 
     )

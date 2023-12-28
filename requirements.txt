@@ -1,0 +1,9 @@
+#asset Calculation
+npm install @mui/material @emotion/react @emotion/styled -force
+npm install dayjs --save -f
+npm install @mui/x-date-pickers -f
+npm install @mui/x-data-grid -f
+npm install @mui/x-charts -f
+npm install mui-color-input -f
+npm install @mui/icons-material -f
+npm i @mui/x-data-grid-generator -f

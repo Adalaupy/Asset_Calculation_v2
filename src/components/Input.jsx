@@ -26,20 +26,20 @@ const Input = () => {
 
     return (
 
-        <div className=' bg-gray-100 w-96 rounded-2xl grid justify-center'>
+        <div className='item-input-main' style={{ border: `${currentColor} 1px solid` }}>
 
 
-            <div className='p-3'>
+            <div className='item-input-box' >
 
 
-                <p className='mb-5 text-2xl font-bold text-center border-b-4 border-slate-400 p-2'>Input New Record</p>
+                <p className='input-title'>Input New Record</p>
 
                 {/* Month Year */}
-                <div className='flex items-center gap-5 justify-between mb-5'>
+                <div className='input-box'>
 
-                    <label className='text-xl left-2'>Month:</label>
+                    <label className=''>Month:</label>
 
-                    <div className='w-2/3'>
+                    <div className='auto-input'>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <DatePicker
                                 defaultValue={defaultMonthYear}
@@ -57,10 +57,10 @@ const Input = () => {
 
 
                 {/* Source */}
-                <div className='mb-5 flex items-center gap-5 justify-between'>
-                    <label className='text-xl'>Source:</label>
+                <div className='input-box'>
+                    <label className=''>Source:</label>
 
-                    <div className='w-2/3'>
+                    <div className='auto-input'>
                         <Autocomplete
                             freeSolo
                             id='source-free-solo'
@@ -77,11 +77,11 @@ const Input = () => {
 
                 {/* Type */}
 
-                <div className='flex items-center gap-5 justify-between mb-5'>
+                <div className='input-box'>
 
-                    <label className='text-xl left-2'>Type:</label>
+                    <label className=''>Type:</label>
 
-                    <div className='w-2/3'>
+                    <div className='auto-input'>
                         <Autocomplete
                             freeSolo
                             id='type-free-solo'
@@ -98,11 +98,11 @@ const Input = () => {
 
                 {/* Amount */}
 
-                <div className='flex items-center gap-5 justify-between mb-5'>
+                <div className='input-box'>
 
-                    <label className='text-xl left-2'>Amount:</label>
+                    <label className=''>Amount:</label>
 
-                    <div className='w-2/3 ml-5'>
+                    <div className='auto-input'>
 
                         <TextField value={AmountInput} inputProps={{ type: 'number', inputMode: 'numeric' }} label='$' variant='standard' onChange={(e) => { setAmountInput(e.target.value) }} />
 
@@ -116,11 +116,11 @@ const Input = () => {
 
                 {/* Currency */}
 
-                <div className='flex items-center gap-5 justify-between mb-5'>
+                <div className='input-box'>
 
-                    <label className='text-xl left-2'>Currency:</label>
+                    <label className=''>Currency:</label>
 
-                    <div className='w-2/3'>
+                    <div className='auto-input'>
                         <Autocomplete
                             freeSolo
                             id='Currency-free-solo'
@@ -138,9 +138,9 @@ const Input = () => {
 
 
 
-            <div className='flex justify-center h-28'>
+            <div style={{ textAlign: 'center' }}>
 
-                <button className=' bottom-0 p-3 m-2 rounded-2xl w-40 h-8 items-center flex justify-center text-white hover:shadow-lg'
+                <button className='submit-btn'
                     style={{ backgroundColor: currentColor }}
                     onClick={UpdateInsertRecord}
                 >
