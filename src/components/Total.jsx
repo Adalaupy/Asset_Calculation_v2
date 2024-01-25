@@ -38,18 +38,18 @@ const Total = () => {
             <div className='All-amt-box'>
 
                 <div className='amt-box'>
-                    <label>Total Asset :</label>
-                    <label className='' >{Sum_Asset}</label>
+                    <label class='total-label'>Total Asset :</label>
+                    <label  >{Sum_Asset}</label>
                 </div>
 
                 <div className='amt-box'>
-                    <label>Total Liability :</label>
-                    <label className='' >{Sum_Liability}</label>
+                    <label class='total-label'>Total Liability :</label>
+                    <label  >{Sum_Liability}</label>
                 </div>
 
                 <div className='amt-box total-cap'>
-                    <label>Total Capital (Asset - Liability) :</label>
-                    <label className='' style={{ color: Sum_Capital > 0 ? 'blue' : 'red' }}>{Sum_Capital}</label>
+                    <label class='total-label'>Total Capital (Asset - Liability) :</label>
+                    <label style={{ color: Sum_Capital > 0 ? 'blue' : 'red' }}>{Sum_Capital}</label>
                 </div>
 
 

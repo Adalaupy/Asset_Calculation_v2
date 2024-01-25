@@ -36,7 +36,7 @@ function App() {
 
 
 
-                        <div className=''>
+                        <div className='table-total-main'>
 
                             {TableActive && (<Table />)}
 

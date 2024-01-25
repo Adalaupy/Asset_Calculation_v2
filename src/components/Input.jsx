@@ -138,16 +138,15 @@ const Input = () => {
 
 
 
-            <div style={{ textAlign: 'center' }}>
 
-                <button className='submit-btn'
-                    style={{ backgroundColor: currentColor }}
-                    onClick={UpdateInsertRecord}
-                >
-                    Submit
-                </button>
+            <button className='submit-btn'
+                style={{ backgroundColor: currentColor }}
+                onClick={UpdateInsertRecord}
+            >
+                Submit
+            </button>
 
-            </div>
+
 
 
 
